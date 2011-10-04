@@ -2,8 +2,16 @@
 %html
   %head
     %title chronicular
-    = stylesheet_link_tag    'application'
+    = stylesheet_link_tag    'application', 'http://twitter.github.com/bootstrap/1.3.0/bootstrap.min.css'
     = javascript_include_tag 'application'
     = csrf_meta_tags
   %body
-    = yield
+    .topbar
+      .fill
+        .container
+          %h3
+            %a chronicular
+    - 6.times do
+      %br
+    .container
+      = yield
